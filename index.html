@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="app">
+        <h1>TO DO LIST</h1>
+        <form>
+          <input type="text" placeholder="Add new task...">
+          <button type="submit">&plus;</button>
+        </form>
+        <ul>
+          <li>
+            <input type="checkbox" onclick="taskComplete(this)" class="check">
+            <input type="text" value="Exercise" class="task" onfocus="getCurrentTask(this)" onblur="editTask(this)">
+            <i class="fa fa-trash" onclick="removeTask(this)"></i>
+
+            <div class="showFilter">
+              <select title="form" name="todos" class="toDoFilter">
+                <option value="all">All</option>
+                <option value="Done">Done</option>
+                <option value="inprogress">In Progress</option>
+              </select>
+            </div>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
